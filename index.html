@@ -13,12 +13,14 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- icon -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
-  <body>
+  <body onload="hideLoading()">
     <header class="header" id="header">
-      <a href="#" class="logo">Faruq.</a>
+      <a href="#" class="logo">Faruq. <span class="animate" style="--i: 1"></span></a>
 
-      <div class="bx bx-menu-alt-right" id="menu-icon"></div>
+      <div class="bx bx-menu-alt-right" id="menu-icon"><span class="animate" style="--i: 2"></span></div>
 
       <nav class="navbar">
         <a href="#home" class="active">Home</a>
@@ -29,49 +31,67 @@
         <a href="#">Blog</a>
 
         <span class="active-nav"></span>
+        <span class="animate" style="--i: 2"></span>
       </nav>
     </header>
 
+    <!-- loading screen -->
+    <div class="loading-spin">
+      <span class="loading-spin-bar"></span>
+      <span class="loading-spin-bar"></span>
+      <span class="loading-spin-bar"></span>
+      <div class="loading-spin-message" data-aos="fade-in" data-aos-delay="1500">Wait a second...</div>
+    </div>
+    <!--  -->
+
     <!-- section home -->
-    <section class="home" id="home">
+    <section class="home show-animate" id="home">
       <video autoplay muted loop plays-inline class="background-video">
-        <source src="assets/video/_import_61515e91acdec4.20185418_FPpreview.mp4" type="video/mp4" />
+        <source src="assets/video/asteroid vid-bg.mp4" type="video/mp4" />
       </video>
+      <span class="animate" style="--i: 5.5; z-index: -100"></span>
 
       <div class="home-content">
-        <h1>HI, I'm Muhamad <span>Faruq</span> Osama.</h1>
+        <h1>HI, I'm Muhamad <span>Faruq</span> Osama. <span class="animate" style="--i: 2"></span></h1>
         <div class="text-animate">
-          <h3>Student at Semarang State University</h3>
+          <h3>Web Developer</h3>
+          <span class="animate" style="--i: 2"></span>
         </div>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint perspiciatis, obcaecati distinctio saepe commodi optio accusamus deleniti harum, neque nobis quisquam? Eius sint sit maiores.</p>
+        <p>
+          I am a passionate student specializing in <span>Web developer</span>. Through this page, I would like to share information about myself, experience, and personal interests. Keep reading to learn more about me!
+          <span class="animate" style="--i: 3"></span>
+        </p>
         <div class="btn-box">
           <a href="">Download CV <i class="bx bx-download"></i></a>
+          <span class="animate" style="--i: 3"></span>
         </div>
       </div>
       <div class="home-sci">
-        <a href="https://www.facebook.com/mfaruq.ma" target="_blank"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/mfaruqosama_/" target="_blank"><i class="bx bxl-instagram"></i></a>
-        <a href="https://github.com/MuhamadFaruqOsama/" target="_blank"><i class="bx bxl-github"></i></a>
+        <a href="https://www.facebook.com/mfaruq.ma" target="_blank" title="visit my Facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/mfaruqosama_/" target="_blank" title="visit my Instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://github.com/MuhamadFaruqOsama/" target="_blank" title="visit my Github"><i class="bx bxl-github"></i></a>
+        <span class="animate" style="--i: 3"></span>
       </div>
     </section>
     <!-- end of section home -->
 
     <!-- section about -->
     <section class="about" id="about">
-      <h3 class="heading">About <span>Me</span></h3>
-      <div class="about-img">
-        <img src="assets/img/3.png" alt="profile-picture" />
+      <h3 class="heading" data-aos="fade-up">About <span>Me</span></h3>
+      <div class="about-img" data-aos="fade-up">
+        <img src="assets/img/personal pictures.jpg" alt="profile-picture" />
         <span class="circle-spin"></span>
+        <span class="circle-spin-2"></span>
       </div>
       <div class="about-content">
-        <h3>Student!</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis facere earum, aperiam magni quasi quisquam labore qui sit voluptate exercitationem accusamus quas iure error maiores, dicta, quo eius consequatur. At non suscipit
-          possimus natus, sit obcaecati nesciunt, quasi, quis temporibus tempore dolorum veritatis. Laborum culpa recusandae consequatur sed eveniet ea!
+        <h3 data-aos="fade-up">Hi!</h3>
+        <p data-aos="fade-up">
+          My name is Muhamad Faruq Osama, I'm from Indonesia more precisely the province of Central Java, Wonosobo. I have a strong commitment to continue growing in the field of Web developer and making significant contributions to the
+          industry. My mission is to change and help Indonesia towards Industry 4.0, and I am determined to achieve it through dedication, hard work, and a willingness to keep learning.
         </p>
 
         <div class="btn-box btns">
-          <a href="#" class="btn">Read More</a>
+          <a href="#" class="btn" data-aos="fade-in-zoom">Read More</a>
         </div>
       </div>
     </section>
@@ -79,46 +99,49 @@
 
     <!-- section education -->
     <section class="education" id="education">
-      <h3 class="heading journey">My <span>Journey</span></h3>
+      <h3 class="heading journey" data-aos="fade-up">My <span>Journey</span></h3>
 
       <div class="education-row">
         <!-- Education -->
         <div class="education-column">
-          <h4 class="title">Education</h4>
+          <h4 class="title" data-aos="fade-up">Education</h4>
           <div class="education-box">
             <!--  -->
-            <div class="education-content">
+            <div class="education-content" data-aos="fade-up">
               <div class="content">
                 <div class="year"><i class="bx bxs-calendar"></i> 2011 - 2017</div>
                 <h3>elementary school - MI Ma'arif Tegalsari</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere optio vitae deleniti recusandae error laborum maiores! Praesentium expedita exercitationem sunt consectetur neque vel odit commodi.</p>
+                <p>I learned fundamental subjects such as mathematics, science, and language, which provided a strong foundation for my academic journey.</p>
               </div>
             </div>
             <!--  -->
             <!--  -->
-            <div class="education-content">
+            <div class="education-content" data-aos="fade-up">
               <div class="content">
                 <div class="year"><i class="bx bxs-calendar"></i> 2017 - 2020</div>
                 <h3>Junior high school - SMP Negeri 1 Mojotengah</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere optio vitae deleniti recusandae error laborum maiores! Praesentium expedita exercitationem sunt consectetur neque vel odit commodi.</p>
+                <p>I discovered new interests and subjects like history, geography, and music. I joined band and engaged in school events, fostering personal growth.</p>
               </div>
             </div>
             <!--  -->
             <!--  -->
-            <div class="education-content">
+            <div class="education-content" data-aos="fade-up">
               <div class="content">
                 <div class="year"><i class="bx bxs-calendar"></i> 2021 - 2023</div>
                 <h3>Vocational School - SMK Negeri 1 Wonosobo</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere optio vitae deleniti recusandae error laborum maiores! Praesentium expedita exercitationem sunt consectetur neque vel odit commodi.</p>
+                <p>SMK equipped me with essential vocational skills relevant to my field of study. I had the opportunity to apply theoretical knowledge in real-world scenarios.</p>
               </div>
             </div>
             <!--  -->
             <!--  -->
-            <div class="education-content">
+            <div class="education-content" data-aos="fade-up">
               <div class="content">
                 <div class="year"><i class="bx bxs-calendar"></i> 2023</div>
-                <h3>college student - Semarang State University</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere optio vitae deleniti recusandae error laborum maiores! Praesentium expedita exercitationem sunt consectetur neque vel odit commodi.</p>
+                <h3>college student - Universitas Negeri Semarang</h3>
+                <p>
+                  I am a fresh student filled with enthusiasm and ready to embark on my college journey this year. I have a strong determination to achieve my goals and hope to make the most of every opportunity to grow and thrive in the
+                  field I am passionate about.
+                </p>
               </div>
             </div>
             <!--  -->
@@ -127,14 +150,14 @@
 
         <!-- Experience -->
         <div class="education-column">
-          <h4 class="title">Experience</h4>
+          <h4 class="title" data-aos="fade-up">Experience</h4>
           <div class="education-box">
             <!--  -->
-            <div class="education-content">
+            <div class="education-content" data-aos="fade-up">
               <div class="content">
                 <div class="year"><i class="bx bxs-calendar"></i> since 2022</div>
                 <h3>Web Developer</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere optio vitae deleniti recusandae error laborum maiores! Praesentium expedita exercitationem sunt consectetur neque vel odit commodi.</p>
+                <p>Currently, I am exploring the world of programming and enjoying exploring new concepts in coding</p>
               </div>
             </div>
             <!--  -->
@@ -146,31 +169,87 @@
 
     <!-- section skills -->
     <section class="skills" id="skills">
-      <h3 class="heading">Coding <span>Skills</span></h3>
+      <h3 class="heading" data-aos="fade-up">My <span>Skills</span></h3>
 
-      <div class="skills-box">
+      <div class="skills-box" data-aos="fade-zoom-in">
         <div class="skills-content">
           <!--  -->
-          <div class="progress">
-            <h4>HTML <span>80%</span></h4>
+          <div class="progress" data-aos="fade-up">
+            <div class="skills-bar-tittle">
+              <span class="skills-bar-tittle-core">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512" class="html">
+                  <style>
+                    svg.html {
+                      fill: #e64b17;
+                    }
+                  </style>
+                  <path d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z" />
+                </svg>
+                <h4>HTML</h4>
+              </span>
+              <span data-aos="fade-zoom-in" data-aos-delay="3000">80%</span>
+            </div>
             <div class="bar"><span></span></div>
           </div>
           <!--  -->
           <!--  -->
-          <div class="progress">
-            <h4>CSS <span>65%</span></h4>
+          <div class="progress" data-aos="fade-up">
+            <div class="skills-bar-tittle">
+              <span class="skills-bar-tittle-core">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="css">
+                  <style>
+                    svg.css {
+                      fill: #0b74b7;
+                    }
+                  </style>
+                  <path d="M480 32l-64 368-223.3 80L0 400l19.6-94.8h82l-8 40.6L210 390.2l134.1-44.4 18.8-97.1H29.5l16-82h333.7l10.5-52.7H56.3l16.3-82H480z" />
+                </svg>
+                <h4>CSS</h4>
+              </span>
+              <span data-aos="fade-zoom-in" data-aos-delay="3000">65%</span>
+            </div>
             <div class="bar"><span></span></div>
           </div>
           <!--  -->
           <!--  -->
-          <div class="progress">
-            <h4>JavaScript <span>30%</span></h4>
+          <div class="progress" data-aos="fade-up">
+            <div class="skills-bar-tittle">
+              <span class="skills-bar-tittle-core">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" class="js">
+                  <style>
+                    svg.js {
+                      fill: #e2c430;
+                    }
+                  </style>
+                  <path
+                    d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"
+                  />
+                </svg>
+                <h4>Javascript</h4>
+              </span>
+              <span data-aos="fade-zoom-in" data-aos-delay="3000">30%</span>
+            </div>
             <div class="bar"><span></span></div>
           </div>
           <!--  -->
           <!--  -->
-          <div class="progress">
-            <h4>PHP <span>70%</span></h4>
+          <div class="progress" data-aos="fade-up">
+            <div class="skills-bar-tittle">
+              <span class="skills-bar-tittle-core">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512" class="php">
+                  <style>
+                    svg.php {
+                      fill: #7377ad;
+                    }
+                  </style>
+                  <path
+                    d="M320 104.5c171.4 0 303.2 72.2 303.2 151.5S491.3 407.5 320 407.5c-171.4 0-303.2-72.2-303.2-151.5S148.7 104.5 320 104.5m0-16.8C143.3 87.7 0 163 0 256s143.3 168.3 320 168.3S640 349 640 256 496.7 87.7 320 87.7zM218.2 242.5c-7.9 40.5-35.8 36.3-70.1 36.3l13.7-70.6c38 0 63.8-4.1 56.4 34.3zM97.4 350.3h36.7l8.7-44.8c41.1 0 66.6 3 90.2-19.1 26.1-24 32.9-66.7 14.3-88.1-9.7-11.2-25.3-16.7-46.5-16.7h-70.7L97.4 350.3zm185.7-213.6h36.5l-8.7 44.8c31.5 0 60.7-2.3 74.8 10.7 14.8 13.6 7.7 31-8.3 113.1h-37c15.4-79.4 18.3-86 12.7-92-5.4-5.8-17.7-4.6-47.4-4.6l-18.8 96.6h-36.5l32.7-168.6zM505 242.5c-8 41.1-36.7 36.3-70.1 36.3l13.7-70.6c38.2 0 63.8-4.1 56.4 34.3zM384.2 350.3H421l8.7-44.8c43.2 0 67.1 2.5 90.2-19.1 26.1-24 32.9-66.7 14.3-88.1-9.7-11.2-25.3-16.7-46.5-16.7H417l-32.8 168.7z"
+                  />
+                </svg>
+                <h4>PHP</h4>
+              </span>
+              <span data-aos="fade-zoom-in" data-aos-delay="3000">70%</span>
+            </div>
             <div class="bar"><span></span></div>
           </div>
           <!--  -->
@@ -179,6 +258,20 @@
     </section>
     <!-- end of section skills -->
 
+    <footer>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#081b29"
+          fill-opacity="1"
+          d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>

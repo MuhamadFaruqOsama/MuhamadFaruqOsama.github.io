@@ -20,6 +20,11 @@ window.onscroll = () => {
         links.classList.remove("active");
         document.querySelector("header nav a[href*=" + id + "]").classList.add("active");
       });
+      sec.classList.add("show-animate");
+      sec.classList.add("bar-animate-active");
+    } else {
+      sec.classList.remove("show-animate");
+      sec.classList.remove("bar-animate-active");
     }
   });
 
@@ -35,3 +40,13 @@ menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
 };
+
+// loading
+let fadeTarget = document.querySelector(".loading-spin");
+
+function showLoading() {
+  fadeTarget.style.display = "block";
+}
+function hideLoading() {
+  fadeTarget.style.display = "none";
+}
