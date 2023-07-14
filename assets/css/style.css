@@ -866,6 +866,12 @@ footer p {
       font-size: 20px;
       margin: 0 0 1rem 1.5rem;
     }
+    .credit .main-content h4 {
+      font-size: 14px;
+    }
+    .credit .main-content p {
+      font-size: 11px;
+    }
     footer.project-desc,
     footer {
       padding: 2.5vh 5%;
