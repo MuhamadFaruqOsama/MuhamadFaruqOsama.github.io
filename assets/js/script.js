@@ -1,6 +1,7 @@
 // sticky navbar
 window.addEventListener("scroll", function () {
   var header = document.getElementById("header");
+  var upBtn = document.getElementById("upBtn");
   header.classList.toggle("sticky", window.scrollY > 0);
 });
 
@@ -43,10 +44,21 @@ menuIcon.onclick = () => {
 
 // loading
 let fadeTarget = document.querySelector(".loading-spin");
+let loadingProduct = document.getElementById("loading-spin");
 
-function showLoading() {
-  fadeTarget.style.display = "block";
-}
 function hideLoading() {
   fadeTarget.style.display = "none";
 }
+function hideLoadingProduct() {
+  loadingProduct.style.display = "none";
+}
+
+// tilt js
+VanillaTilt.init(document.querySelector(".row-product .product-column", "about-img img"), {
+  max: 30,
+  transition: true,
+  scale: 1,
+  reverse: false,
+  speed: 400,
+  gyroscope: false,
+});

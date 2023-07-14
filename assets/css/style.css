@@ -81,8 +81,11 @@ section.home .background-video {
   z-index: 100;
   transition: 0.5s;
 }
+.header.product-page {
+  margin-bottom: -7.5vh;
+}
 .header.sticky {
-  background: #081b29c4;
+  background: #081b29;
   padding: 10px 10%;
 }
 .logo {
@@ -92,6 +95,9 @@ section.home .background-video {
   text-decoration: none;
   font-weight: 600;
 }
+.logo.btn-back:hover {
+  color: #00abf0;
+}
 #menu-icon {
   position: relative;
   display: none;
@@ -99,8 +105,9 @@ section.home .background-video {
 }
 .navbar {
   position: relative;
+  display: flex;
 }
-.navbar a {
+.navbar span a {
   font-size: 18px;
   color: #ededed;
   text-decoration: none;
@@ -108,8 +115,55 @@ section.home .background-video {
   margin-left: 35px;
   transition: 0.3s;
 }
+/* for product page */
+.navbar a.logo i {
+  font-size: 30px;
+}
 .navbar a:hover,
 .navbar a.active {
+  color: #00abf0;
+}
+.navbar span.dropdown {
+  display: block;
+}
+.navbar span.dropdown a.dropdown {
+  color: #00abf0;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+.navbar span.dropdown a.dropdown i {
+  font-size: 19px;
+}
+.navbar span.dropdown ul li {
+  display: none;
+  list-style: none;
+}
+.navbar span.dropdown:hover ul li {
+  display: flex;
+  flex-direction: column;
+}
+.header.sticky .navbar span.dropdown:hover ul {
+  background: #081b29;
+}
+.navbar span.dropdown ul {
+  text-align: start;
+  position: absolute;
+  padding: 0 0 0 20px;
+  width: 30%;
+  margin-left: 31px;
+}
+.navbar span.dropdown ul:hover li {
+  display: flex;
+  flex-direction: column;
+}
+.navbar span.dropdown ul li a {
+  margin: 10px 0;
+  text-decoration: none;
+  color: #ededed;
+  font-weight: 500;
+}
+.navbar span.dropdown ul li a:hover {
   color: #00abf0;
 }
 .home {
@@ -119,7 +173,7 @@ section.home .background-video {
   padding: 0 10%;
 }
 .home-content {
-  max-width: 70%;
+  width: 70%;
 }
 .home-content h1 {
   position: relative;
@@ -127,9 +181,11 @@ section.home .background-video {
   font-size: 45px;
   font-weight: 700;
 }
+.home-content h1 span {
+  color: #00abf0;
+}
 .home-content .text-animate {
   position: relative;
-  width: 32.8rem;
 }
 .home-content .text-animate h3 {
   position: relative;
@@ -142,8 +198,9 @@ section.home .background-video {
   -webkit-background-clip: text;
   background-position: -34rem 0;
   animation: homeBgText 6s linear infinite;
-  animation-delay: 2s;
+  animation-delay: q2s;
 }
+
 /* .home-content .text-animate h3::before {
   content: "";
   position: absolute;
@@ -157,7 +214,7 @@ section.home .background-video {
   animation-delay: 2s;
 } */
 .home-content p {
-  max-width: 60%;
+  width: 60%;
   position: relative;
   font-size: 14px;
   margin: 10px 0 40px 0;
@@ -209,7 +266,7 @@ section.home .background-video {
 }
 .home-sci {
   position: absolute;
-  bottom: 4rem;
+  bottom: 3rem;
   width: 170px;
   display: flex;
   justify-content: space-between;
@@ -279,6 +336,7 @@ section.home .background-video {
   height: 90%;
   /* border: 3px solid #00abf0; */
   border-radius: 50%;
+  transition: 0.3s;
 }
 .about-img .circle-spin {
   position: absolute;
@@ -463,6 +521,99 @@ section.home .background-video {
   animation: skillsBar4 2.5s forwards;
   animation-delay: 1s;
 }
+section.product {
+  min-height: 100vh;
+  padding: 40px 10% 80px 10%;
+  background: linear-gradient(to right, #081b29, #143c58, #081b29);
+}
+h3.heading.product-heading {
+  margin-bottom: 7vh;
+}
+.row-product {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.row-product .product-column {
+  flex: 1;
+  cursor: pointer;
+  margin-bottom: 13vh;
+}
+.product-column .content {
+  width: 100%;
+}
+.product-column .content .main-content {
+  border: 2px solid #00acf073;
+  width: 290px;
+  height: 150px;
+  margin: auto;
+  background: #00acf073;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.product-column:hover .content .main-content {
+  border: 0;
+}
+.product-column .content .main-content h3 {
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+}
+.product-column:hover .content .main-content h3 {
+  transform: translate(0, -100%) scale(1.2);
+}
+.product-column .content .main-content img {
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.product-column:hover .content .main-content img {
+  transform: scale(1.15);
+}
+.product-column .content .main-content p {
+  font-size: 13px;
+  transition: 0.3s;
+  opacity: 0;
+}
+.product-column:hover .content .main-content p {
+  transform: translate(0, 30%);
+  opacity: 1;
+}
+.product-column .content .main-content p a {
+  color: #00abf0;
+  text-decoration: none;
+}
+.product-column .content .main-content p a:hover {
+  color: #0899d3;
+  text-decoration: none;
+}
+footer.project-desc {
+  background: #081b29;
+  width: 100%;
+  padding: 2vh 10%;
+  text-align: center;
+}
+footer.project-desc p.desc {
+  font-size: 14px;
+  margin: 2vh 0;
+}
+footer.project-desc p a {
+  text-decoration: none;
+  color: #00abf0;
+}
+footer {
+  width: 100%;
+  background: #081b29;
+  padding: 2vh 10%;
+  text-align: center;
+}
+footer p {
+  font-size: 14px;
+}
+/* animation */
 .animate {
   position: absolute;
   top: 0;
@@ -477,22 +628,17 @@ section.home .background-video {
   z-index: -100;
 }
 .logo .animate,
+.logo .animate,
 .navbar .animate,
 #menu-icon .animate,
 .home.show-animate .animate {
   animation: showRight 1s ease forwards;
   animation-delay: calc(0.3s * var(--i));
 }
-footer {
-  width: 100%;
-  height: auto;
-  background: linear-gradient(to right, #081b29, #143c58, #081b29);
-  padding: 0;
-}
-@media (max-width: 768px) {
+@media (max-width: 891px) {
   .header,
   .header.sticky {
-    padding: 10px 5%;
+    padding: 10px 5% 0 5%;
   }
   section.home,
   section.about,
@@ -530,11 +676,12 @@ footer {
     font-size: 13px;
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 700px) {
     section.home .background-video {
       position: absolute;
       right: -65;
       bottom: 0;
+      height: 110vh;
       z-index: -100;
     }
     #menu-icon {
@@ -547,6 +694,7 @@ footer {
     }
     .navbar {
       position: absolute;
+      display: block;
       top: 100%;
       left: -100%;
       width: 100%;
@@ -592,6 +740,17 @@ footer {
     .header.sticky {
       padding: 10px 4%;
     }
+    .navbar span.dropdown ul {
+      padding: 0 20%;
+      text-align: start;
+      position: absolute;
+      margin-left: -5%;
+      width: 100%;
+      background: #081b29;
+    }
+    .navbar span.dropdown ul li:nth-child(4) {
+      margin-bottom: 10px;
+    }
     section.home,
     section.about,
     section.education,
@@ -608,9 +767,12 @@ footer {
       font-size: 22px;
     }
     .home-content p {
-      width: 100%;
+      width: 80%;
       font-size: 12px;
-      margin: 10px 0 30px 0;
+      margin: 10px 0 40px 0;
+    }
+    .btn-box {
+      bottom: 1.5rem;
     }
     .btn-box a {
       width: 150px;
@@ -630,8 +792,8 @@ footer {
       height: 30px;
       font-size: 15px;
     }
-    .about-content p {
-      font-size: 13px;
+    section.about {
+      margin-top: 0;
     }
     .heading {
       font-size: 28px;
@@ -649,7 +811,9 @@ footer {
       font-size: 20px;
     }
     .about-content p {
+      width: 100%;
       font-size: 11px;
+      margin: 0 0 10vh 0;
     }
     .education {
       display: block;
@@ -667,6 +831,14 @@ footer {
       font-size: 20px;
       margin: 0 0 1rem 1.5rem;
     }
+    footer.project-desc,
+    footer {
+      padding: 2.5vh 5%;
+    }
+    footer.project-desc p.desc,
+    footer p {
+      font-size: 11px;
+    }
   }
 }
 
@@ -680,7 +852,7 @@ footer {
   0%,
   10%,
   100% {
-    background-position: -35rem 0;
+    background-position: -51rem 0;
   }
   65%,
   85% {

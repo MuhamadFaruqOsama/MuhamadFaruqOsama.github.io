@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome</title>
+    <title>Welcome - Faruq.</title>
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,24 +18,6 @@
     <link rel="shortcut icon" href="assets/svg/headphones-solid.svg" type="image/x-icon" />
   </head>
   <body onload="hideLoading()">
-    <header class="header" id="header">
-      <a href="#" class="logo">Faruq. <span class="animate" style="--i: 1"></span></a>
-
-      <div class="bx bx-menu-alt-right" id="menu-icon"><span class="animate" style="--i: 2"></span></div>
-
-      <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#">Product</a>
-        <a href="#">Blog</a>
-
-        <span class="active-nav"></span>
-        <span class="animate" style="--i: 2"></span>
-      </nav>
-    </header>
-
     <!-- loading screen -->
     <div class="loading-spin">
       <span class="loading-spin-bar"></span>
@@ -44,6 +26,31 @@
       <div class="loading-spin-message" data-aos="fade-in" data-aos-delay="1500">Wait a second...</div>
     </div>
     <!--  -->
+
+    <header class="header" id="header">
+      <a href="#" class="logo">Faruq. <span class="animate" style="--i: 1"></span></a>
+
+      <div class="bx bx-menu-alt-right" id="menu-icon"><span class="animate" style="--i: 2"></span></div>
+
+      <nav class="navbar">
+        <span><a href="#home" class="active">Home</a></span>
+        <span><a href="#about">About</a></span>
+        <span><a href="#education" class="nav-menu">Education</a></span>
+        <span><a href="#skills">Skills</a></span>
+        <span class="dropdown">
+          <a class="dropdown">Others <i class="bx bx-chevrons-down"></i></a>
+          <ul>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Me</a></li>
+            <li><a href="#">Credit</a></li>
+          </ul>
+        </span>
+
+        <span class="active-nav"></span>
+        <span class="animate" style="--i: 2"></span>
+      </nav>
+    </header>
 
     <!-- section home -->
     <section class="home show-animate" id="home">
@@ -63,7 +70,7 @@
           <span class="animate" style="--i: 3"></span>
         </p>
         <div class="btn-box">
-          <a href="">Download CV <i class="bx bx-download"></i></a>
+          <a href="">Hire Me</a>
           <span class="animate" style="--i: 3"></span>
         </div>
       </div>
@@ -79,7 +86,7 @@
     <!-- section about -->
     <section class="about" id="about">
       <h3 class="heading" data-aos="fade-up">About <span>Me</span></h3>
-      <div class="about-img" data-aos="fade-up">
+      <div class="about-img" data-aos="fade-up" data-tilt>
         <img src="assets/img/personal pictures.jpg" alt="profile-picture" />
         <span class="circle-spin"></span>
         <span class="circle-spin-2"></span>
@@ -260,13 +267,7 @@
     <!-- end of section skills -->
 
     <footer>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#081b29"
-          fill-opacity="1"
-          d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
+      <p>Copyright © 2023 Faruq. All Rights Reserved</p>
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -274,5 +275,6 @@
       AOS.init();
     </script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/vanilla-tilt.min.js"></script>
   </body>
 </html>
