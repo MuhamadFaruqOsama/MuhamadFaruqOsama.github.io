@@ -62,3 +62,8 @@ VanillaTilt.init(document.querySelector(".row-product .product-column", "about-i
   speed: 400,
   gyroscope: false,
 });
+
+// back btn
+function goBack() {
+  window.history.back();
+}

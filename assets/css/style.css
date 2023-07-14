@@ -116,7 +116,8 @@ section.home .background-video {
   transition: 0.3s;
 }
 /* for product page */
-.navbar a.logo i {
+header a.logo i {
+  cursor: pointer;
   font-size: 30px;
 }
 .navbar a:hover,
