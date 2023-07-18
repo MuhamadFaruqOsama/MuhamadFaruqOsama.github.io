@@ -44,13 +44,9 @@ menuIcon.onclick = () => {
 
 // loading
 let fadeTarget = document.querySelector(".loading-spin");
-let loadingProduct = document.getElementById("loading-spin");
 
 function hideLoading() {
   fadeTarget.style.display = "none";
-}
-function hideLoadingProduct() {
-  loadingProduct.style.display = "none";
 }
 
 // tilt js
@@ -67,3 +63,30 @@ VanillaTilt.init(document.querySelector(".row-product .product-column", "about-i
 function goBack() {
   window.history.back();
 }
+// contact-me page
+// let contactForm = document.getElementById("contact-me-form");
+// let loadingForm = document.getElementById("loading-form");
+
+// loadingForm.style.display = "none";
+
+// contactForm.addEventListener("submit", function (e) {
+//   loadingForm.display.style = "block";
+
+//   e.preventDefault();
+
+//   const url = e.target.action;
+//   const formData = new formData(contactForm);
+
+//   fetch(url, {
+//     method: "POST",
+//     body: formData,
+//     mode: "no-cors",
+//   })
+//     .then(() => {
+//       // url
+//       loadingForm.display.style = "none";
+
+//       window.location.href = "../../page/contact.me.page/thanks.html";
+//     })
+//     .catch((e) => alert("Eror occured"));
+// });

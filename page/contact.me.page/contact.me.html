@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product - Faruq.</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <!-- vanilla css -->
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <!-- icon -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="shortcut icon" href="../../assets/svg/headphones-solid.svg" type="image/x-icon" />
+  </head>
+  <body onload="hideLoading()">
+    <!-- loading screen -->
+    <div class="loading-spin">
+      <span class="loading-spin-bar"></span>
+      <span class="loading-spin-bar"></span>
+      <span class="loading-spin-bar"></span>
+      <div class="loading-spin-message" data-aos="fade-in" data-aos-delay="1500">Wait a second...</div>
+    </div>
+    <!--  -->
+
+    <header class="header" id="header">
+      <a class="logo btn-back" onclick="goBack()"><i class="bx bxs-chevrons-left"></i> <span class="animate" style="--i: 1"></span></a>
+
+      <div id="menu-icon"></div>
+    </header>
+
+    <section class="contact-me" id="contact-me">
+      <div class="feedback-row">
+        <div class="feedback-column">
+          <div class="feedback-desc">
+            <h3 class="heading" data-aos="fade-up">Contact <span>Me</span></h3>
+            <img src="../../assets/json/floating person.json" alt="" />
+          </div>
+        </div>
+        <div class="feedback-column">
+          <form action="https://formspree.io/f/xgejejnn" method="post" data-aos="fade-up" id="contact-me-form">
+            <input type="text" name="Full Name" id="Full Name" placeholder="Full Name" required autofocus />
+            <input type="email" name="Email" id="Email" placeholder="Email" required />
+            <input type="text" name="Subject" id="Subject" placeholder="Subject" required />
+            <textarea name="Message" id="Message" placeholder="Write your Message here" required></textarea>
+            <button type="submit" class="btn-submit">Send Message</button>
+            <!-- loading area -->
+            <!-- <div class="loading-form" id="loading-form">
+              <span class="loading-form-bar"></span>
+              <span class="loading-form-bar"></span>
+            </div> -->
+            <!--  -->
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Copyright © 2023 Faruq. All Rights Reserved</p>
+    </footer>
+    <script src="../../assets/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

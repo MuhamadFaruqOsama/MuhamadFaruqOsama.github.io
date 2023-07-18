@@ -631,6 +631,124 @@ h3.heading.product-heading {
   padding: 2vh 10%;
   text-align: center;
 }
+section.contact-me {
+  padding: 20vh 10% 5vh 10%;
+  min-height: 100vh;
+}
+section.contact-me .feedback-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+section.contact-me .feedback-row .feedback-column {
+  flex: 1 1;
+}
+section.contact-me .feedback-row .feedback-column h3 {
+  text-align: start;
+}
+section.contact-me .feedback-row .feedback-column img {
+  width: 70%;
+}
+section.contact-me form {
+  align-items: center;
+}
+section.contact-me form input {
+  display: block;
+  min-width: 100%;
+  height: 7vh;
+  padding: 0 10px;
+  margin: 15px 0;
+  background: transparent;
+  border: 1px solid #00abf0;
+  border-radius: 10px;
+  color: #ededed;
+  transition: 0.3s;
+}
+section.contact-me form input::-webkit-input-placeholder,
+section.contact-me form textarea::-webkit-input-placeholder {
+  color: #edededa9;
+}
+section.contact-me form input:focus,
+section.contact-me form textarea:focus {
+  outline: none;
+  border: 1px solid #00abf0;
+  box-shadow: 0 0 10px #00acf0b7;
+  background: transparent;
+}
+section.contact-me form textarea {
+  display: block;
+  min-width: 100%;
+  height: 25vh;
+  padding: 1vh 10px;
+  margin: 10px 0;
+  background: transparent;
+  border: 1px solid #00abf0;
+  border-radius: 10px;
+  color: #ededed;
+  transition: 0.3s;
+}
+section.contact-me form button {
+  background: #00abf0;
+  color: #ededed;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.3s;
+  min-width: 100%;
+  height: 7vh;
+  padding: 0 10px;
+  margin: 15px 0;
+  border: 1px solid #00abf0;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+section.contact-me form button:hover {
+  background: #00acf0d5;
+}
+.loading-form {
+  width: 35px;
+  height: 35px;
+  float: right;
+  z-index: 10000;
+  background: #081b29;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.loading-form .loading-form-bar {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border-top: 3px solid transparent;
+  border-right: 2px solid #00abf0;
+  border-bottom: 3px solid transparent;
+  border-left: 2px solid #00abf0;
+  animation: formLoader 4s linear infinite;
+}
+.loading-form .loading-form-bar:nth-child(2) {
+  width: 30px;
+  height: 30px;
+  animation: formLoader 3.5s linear infinite;
+}
+/* section.thanks {
+  padding: 10vh 10%;
+  min-height: 100vh;
+}
+section.thanks img {
+  margin: 3vh 0;
+  width: 50%;
+  transform: translate(50%, 0);
+}
+section.thanks a.btn-back-contact {
+  border: 2px solid #00abf0;
+  border-radius: 10px;
+  color: #ededed;
+  text-decoration: none;
+  padding: 1vh 4vh;
+} */
 footer.project-desc p.desc {
   font-size: 14px;
   margin: 2vh 0;
@@ -872,6 +990,13 @@ footer p {
     .credit .main-content p {
       font-size: 11px;
     }
+    section.contact-me {
+      padding: 10vh 5% 5vh 5%;
+      min-height: 100vh;
+    }
+    section.contact-me .feedback-row {
+      display: block;
+    }
     footer.project-desc,
     footer {
       padding: 2.5vh 5%;
@@ -951,5 +1076,10 @@ footer p {
 @keyframes skillsBar4 {
   100% {
     width: 70%;
+  }
+}
+@keyframes formLoader {
+  100% {
+    transform: rotate(360deg);
   }
 }
