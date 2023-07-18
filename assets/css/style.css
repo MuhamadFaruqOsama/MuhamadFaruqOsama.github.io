@@ -460,7 +460,7 @@ header a.logo i {
   margin-bottom: 4px;
 }
 .education-content .content p {
-  font-size: 11px;
+  font-size: 12px;
 }
 .skills {
   min-height: 100vh;
@@ -644,9 +644,10 @@ section.contact-me .feedback-row .feedback-column {
 }
 section.contact-me .feedback-row .feedback-column h3 {
   text-align: start;
+  margin-bottom: 20px;
 }
-section.contact-me .feedback-row .feedback-column img {
-  width: 70%;
+section.contact-me .feedback-row .feedback-column lottie-player {
+  width: 90%;
 }
 section.contact-me form {
   align-items: center;
@@ -705,7 +706,7 @@ section.contact-me form button {
 section.contact-me form button:hover {
   background: #00acf0d5;
 }
-.loading-form {
+/* .loading-form {
   width: 35px;
   height: 35px;
   float: right;
@@ -732,23 +733,24 @@ section.contact-me form button:hover {
   width: 30px;
   height: 30px;
   animation: formLoader 3.5s linear infinite;
-}
-/* section.thanks {
+} */
+section.thanks {
   padding: 10vh 10%;
   min-height: 100vh;
 }
-section.thanks img {
-  margin: 3vh 0;
-  width: 50%;
-  transform: translate(50%, 0);
+section.thanks .grettings {
+  min-width: 80%;
+  margin: auto;
+  align-items: center;
 }
-section.thanks a.btn-back-contact {
-  border: 2px solid #00abf0;
-  border-radius: 10px;
-  color: #ededed;
-  text-decoration: none;
-  padding: 1vh 4vh;
-} */
+section.thanks .grettings lottie-player {
+  width: 40%;
+  margin: auto;
+}
+section.thanks .grettings p {
+  text-align: center;
+  font-size: 14px;
+}
 footer.project-desc p.desc {
   font-size: 14px;
   margin: 2vh 0;
@@ -809,7 +811,7 @@ footer p {
     font-size: 24px;
   }
   .home-content p {
-    font-size: 13px;
+    font-size: 1px;
     margin: 10px 0 40px 0;
   }
   .btn-box a {
@@ -965,7 +967,7 @@ footer p {
     }
     .about-content p {
       width: 100%;
-      font-size: 11px;
+      font-size: 12px;
       margin: 0 0 10vh 0;
     }
     .education {
@@ -988,7 +990,7 @@ footer p {
       font-size: 14px;
     }
     .credit .main-content p {
-      font-size: 11px;
+      font-size: 12px;
     }
     section.contact-me {
       padding: 10vh 5% 5vh 5%;
@@ -997,13 +999,29 @@ footer p {
     section.contact-me .feedback-row {
       display: block;
     }
+    section.contact-me .feedback-row .feedback-column lottie-player {
+      width: 80%;
+      margin: auto;
+    }
+    section.contact-me .feedback-row .feedback-column form {
+      margin-top: 20px;
+    }
+    section.thanks {
+      padding: 10vh 5% 5vh 5%;
+    }
+    section.thanks .grettings lottie-player {
+      width: 80%;
+    }
+    section.thanks .grettings p {
+      font-size: 12px;
+    }
     footer.project-desc,
     footer {
       padding: 2.5vh 5%;
     }
     footer.project-desc p.desc,
     footer p {
-      font-size: 11px;
+      font-size: 12px;
     }
   }
 }

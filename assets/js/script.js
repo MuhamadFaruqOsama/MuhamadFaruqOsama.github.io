@@ -49,16 +49,6 @@ function hideLoading() {
   fadeTarget.style.display = "none";
 }
 
-// tilt js
-VanillaTilt.init(document.querySelector(".row-product .product-column", "about-img img"), {
-  max: 30,
-  transition: true,
-  scale: 1,
-  reverse: false,
-  speed: 400,
-  gyroscope: false,
-});
-
 // back btn
 function goBack() {
   window.history.back();
