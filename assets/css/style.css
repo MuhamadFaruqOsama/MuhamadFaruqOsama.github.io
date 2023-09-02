@@ -502,8 +502,8 @@ header a.logo i {
 .skills-row .skills-column {
   background-color: #081b29;
   width: 120px;
-  height: 120px;
-  padding: 10px;
+  height: 140px;
+  padding: 30px 20px 20px 20px;
   margin: 10px;
   border-radius: 7px;
   cursor: pointer;
@@ -516,11 +516,14 @@ header a.logo i {
 }
 .skills-column .skills-content {
   align-items: center;
-  line-height: 120px;
 }
 .skills-column .skills-content img {
   width: 100%;
   margin: auto;
+  transition: 0.5s;
+}
+.skills-column:hover .skills-content img {
+  transform: scale(1.2);
 }
 section.product {
   min-height: 100vh;
@@ -1070,7 +1073,7 @@ footer p {
     }
     .skills-row .skills-column {
       width: 110px;
-      height: 110px;
+      height: 130px;
     }
     .message-row .message-column .message-content p {
       font-size: 14px;
