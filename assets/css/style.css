@@ -226,9 +226,9 @@ header a.logo i {
 }
 .btn-box {
   position: relative;
-  margin-bottom: 1vh;
 }
 .btn-box a {
+  margin-top: 1vh;
   display: flex;
   position: relative;
   justify-content: center;
@@ -610,11 +610,11 @@ h3.heading.product-heading {
 }
 .message-row .message-column .message-animation {
   align-items: center;
-  width: 100%;
-  margin: auto;
 }
 .message-row .message-column .message-animation lottie-player {
   margin: auto;
+  width: 300px;
+  height: 300px;
 }
 .message-row .message-column .message-content p {
   margin-top: 4vh;
@@ -1025,6 +1025,7 @@ footer p {
     }
     .home-sci {
       width: 140px;
+      bottom: 3.3rem;
     }
     .home-sci a {
       border: 2px solid #00abf0;
@@ -1072,8 +1073,17 @@ footer p {
       margin: 0 0 1rem 1.5rem;
     }
     .skills-row .skills-column {
-      width: 110px;
-      height: 130px;
+      width: 90px;
+      height: 110px;
+      padding: 20px 10px 10px 10px;
+    }
+    .message-row .message-column .message-animation {
+      align-items: center;
+    }
+    .message-row .message-column .message-animation lottie-player {
+      width: 240px;
+      height: 240px;
+      margin: auto;
     }
     .message-row .message-column .message-content p {
       font-size: 14px;
