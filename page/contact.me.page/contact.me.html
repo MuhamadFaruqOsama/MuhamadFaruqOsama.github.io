@@ -42,18 +42,17 @@
         </div>
         <div class="feedback-column">
           <h3 class="heading" data-aos="fade-up">Contact <span>Me</span>.</h3>
-          <form action="https://formspree.io/f/xgejejnn" method="post" data-aos="fade-up" id="contact-me-form">
+          <form id="contact-me-form" action="https://formspree.io/f/xgejejnn" method="post" data-aos="fade-up">
             <input type="text" name="Full Name" id="Full Name" placeholder="Full Name" required autofocus />
             <input type="email" name="Email" id="Email" placeholder="Email" required />
             <input type="text" name="Subject" id="Subject" placeholder="Subject" required />
             <textarea name="Message" id="Message" placeholder="Write your Message here" required></textarea>
-            <button type="submit" class="btn-submit">Send Message</button>
-            <!-- loading area -->
-            <!-- <div class="loading-form" id="loading-form">
+            <button type="submit" class="btn-submit">
+              <span> Send Message </span>
+            </button>
+            <div class="loading-form" id="loading-form">
               <span class="loading-form-bar"></span>
-              <span class="loading-form-bar"></span>
-            </div> -->
-            <!--  -->
+            </div>
           </form>
         </div>
       </div>
@@ -68,5 +67,6 @@
     <script>
       AOS.init();
     </script>
+    \
   </body>
 </html>

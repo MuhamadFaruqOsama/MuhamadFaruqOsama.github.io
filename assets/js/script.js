@@ -52,31 +52,25 @@ function hideLoading() {
 // back btn
 function goBack() {
   window.history.back();
+  Form.reset();
 }
 // contact-me page
-// let contactForm = document.getElementById("contact-me-form");
-// let loadingForm = document.getElementById("loading-form");
+const contactForm = document.getElementById("contact-me-form");
 
-// loadingForm.style.display = "none";
+contactForm.addEventListener("submit", function (event) {
+  event.defaultPrevented();
 
-// contactForm.addEventListener("submit", function (e) {
-//   loadingForm.display.style = "block";
+  const url = event.target.action;
+  const formData = new formData(contactForm);
 
-//   e.preventDefault();
-
-//   const url = e.target.action;
-//   const formData = new formData(contactForm);
-
-//   fetch(url, {
-//     method: "POST",
-//     body: formData,
-//     mode: "no-cors",
-//   })
-//     .then(() => {
-//       // url
-//       loadingForm.display.style = "none";
-
-//       window.location.href = "../../page/contact.me.page/thanks.html";
-//     })
-//     .catch((e) => alert("Eror occured"));
-// });
+  fetch(url, {
+    method: "POST",
+    body: formData,
+    mode: "no-cors",
+  })
+    .then(() => {
+      // url
+      window.location.href = "thanks.html";
+    })
+    .catch((event) => alert("eror bang"));
+});
