@@ -55,22 +55,3 @@ function goBack() {
   Form.reset();
 }
 // contact-me page
-const contactForm = document.getElementById("contact-me-form");
-
-contactForm.addEventListener("submit", function (event) {
-  event.defaultPrevented();
-
-  const url = event.target.action;
-  const formData = new formData(contactForm);
-
-  fetch(url, {
-    method: "POST",
-    body: formData,
-    mode: "no-cors",
-  })
-    .then(() => {
-      // url
-      window.location.href = "thanks.html";
-    })
-    .catch((event) => alert("eror bang"));
-});

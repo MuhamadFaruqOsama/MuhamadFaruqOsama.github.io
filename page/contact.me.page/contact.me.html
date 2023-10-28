@@ -47,12 +47,12 @@
             <input type="email" name="Email" id="Email" placeholder="Email" required />
             <input type="text" name="Subject" id="Subject" placeholder="Subject" required />
             <textarea name="Message" id="Message" placeholder="Write your Message here" required></textarea>
-            <button type="submit" class="btn-submit">
+            <button type="submit" id="button" class="btn-submit">
               <span> Send Message </span>
             </button>
-            <div class="loading-form" id="loading-form">
+            <!-- <div class="loading-form" id="loading-form">
               <span class="loading-form-bar"></span>
-            </div>
+            </div> -->
           </form>
         </div>
       </div>
@@ -67,6 +67,26 @@
     <script>
       AOS.init();
     </script>
-    \
+    <script>
+      const button = document.getElementById("button");
+
+      contactForm.addEventListener("click", function (event) {
+        event.defaultPrevented();
+
+        const url = event.target.action;
+        const formData = new formData(contactForm);
+
+        fetch(url, {
+          method: "POST",
+          body: formData,
+          mode: "no-cors",
+        })
+          .then(() => {
+            // url
+            window.location.href = "thanks.html";
+          })
+          .catch((event) => alert("eror bang"));
+      });
+    </script>
   </body>
 </html>

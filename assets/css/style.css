@@ -512,7 +512,6 @@ header a.logo i {
 .skills-row .skills-column:hover {
   transform: translate(0%, -20%);
   box-shadow: 0 15px 14px #00abf0;
-  border: 1px solid #00abf0;
 }
 .skills-column .skills-content {
   align-items: center;
