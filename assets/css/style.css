@@ -314,17 +314,26 @@ header a.logo i {
   flex-direction: column;
   padding: 80px 10% 20px 10%;
   gap: 2rem;
-  background: linear-gradient(to right, #081b29, #143c58, #081b29);
+  /* background: linear-gradient(to right, #081b29, #143c58, #081b29); */
+  background-color: #081b29;
   min-height: 100vh;
+}
+hr.end-of {
+  color: #00abf0 !important;
+  background-color: #00abf0;
+  margin: 80px 10% 20px 10%;
 }
 .heading {
   font-size: 40px;
   text-align: center;
-  font-weight: 700;
+  font-weight: bold;
+  background: linear-gradient(to right bottom, #00abf0, #fff, #00abf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.heading span {
+/* .heading span {
   color: #00abf0;
-}
+} */
 .about-img {
   position: relative;
   width: 16rem;
@@ -374,12 +383,6 @@ header a.logo i {
   flex-direction: column;
   gap: 10px;
   text-align: center;
-}
-.about-content h3 {
-  font-size: 26px;
-}
-.about-content h3 span {
-  color: #00abf0;
 }
 .about-content p {
   font-size: 14px;
@@ -491,7 +494,8 @@ header a.logo i {
 .skills {
   min-height: 100vh;
   padding: 80px 10% 30px 10%;
-  background: linear-gradient(to right, #081b29, #143c58, #081b29);
+  /* background: linear-gradient(to right, #081b29, #143c58, #081b29); */
+  background: #081b29;
 }
 .skills-row {
   margin-top: 10vh;
@@ -511,7 +515,8 @@ header a.logo i {
 }
 .skills-row .skills-column:hover {
   transform: translate(0%, -20%);
-  box-shadow: 0 15px 14px #00abf0;
+  box-shadow: 2px 15px 0px #00abf0;
+  border: 0.05px solid #00abf0;
 }
 .skills-column .skills-content {
   align-items: center;
@@ -527,7 +532,8 @@ header a.logo i {
 section.product {
   min-height: 100vh;
   padding: 40px 10% 80px 10%;
-  background: linear-gradient(to right, #081b29, #143c58, #081b29);
+  /* background: linear-gradient(to right, #081b29, #143c58, #081b29); */
+  background-color: #081b29;
 }
 h3.heading.product-heading {
   margin-bottom: 7vh;
@@ -599,6 +605,8 @@ h3.heading.product-heading {
   min-height: 10vh;
   background: #081b29;
   border-radius: 10px;
+  box-shadow: 10px 10px 0px #00abf0;
+  border: 0.03px solid #00abf0;
 }
 .project-message .message-row {
   display: flex;
